@@ -1,0 +1,84 @@
+#-----------------------------------------#
+# Created By George Shea a ßeta product
+# date created 27/8/2019
+# update date  version 1.0
+# does 2 math and finds dates and letters
+#-----------------------------------------#
+
+def chooser():# this allows you to repeat if you say type in not 1-4
+    print("1 Addition")
+    print("2 Subtraction")
+    print("3 multiplaction")
+    print("4 division")
+    choose = int(input("Enter Dir Number"))
+def Calc():
+    print("1 Addition")
+    print("2 Subtraction")
+    print("3 multiplaction")
+    print("4 division")
+    choose = int(input("Enter Dir Number"))
+    def Addition():     # also a converter
+        print("Binary Adder")
+        print()
+        bin1 = str(input("Please enter first Binary Number: "))
+        bin2 = str(input("Please enter second Binary Number: "))
+        addsol = bin(int(bin1, 2) + int(bin2, 2))    # does the adding
+        addsolDec = int(addsol, 2)
+        print()
+        print("First Number Dec:", int(bin1, 2), "Second Number Dec:", int(bin2, 2))    # converts it to dec to make it easy to understand
+        print("Binary Answer:", addsol, "Decimal Answer:", addsolDec)                   # finale result booth in dec and and in bin
+        print()
+        Addition()
+    if choose == 1:     # Addition Math
+        Addition()
+
+    def Subtraction():
+        print("Binary Subtracter")
+        print()
+        bin1 = str(input("Please enter first Binary Number: "))
+        bin2 = str(input("Please enter second Binary Number: "))
+        addsol = bin(int(bin1, 2) - int(bin2, 2))    # does the subtracting
+        addsolDec = int(addsol, 2)                   # converts the binary number into decimal
+        print()
+        print("First Number Dec: ", int(bin1, 2), "Second Number Dec", int(bin2, 2))    # converts it to dec to make it easy to understand
+        print ("Binary Answer:", addsol, "Decimal Answer:", addsolDec)                   # finale result booth in dec and and in bin
+        print()
+        Subtraction()
+    if choose == 2:
+        Subtraction()
+
+    def Mutiplaction():
+        print("Binary Mutiplyer")
+        print()
+        bin1 = str(input("Please enter first Binary Number: "))
+        bin2 = str(input("Please enter second Binary Number: "))
+        addsol = bin(int(bin1, 2) * int(bin2, 2))    # does the mutiplying
+        addsolDec = int(addsol, 2)# converts the binary number into decimal
+        print()
+        print("First Number Dec: ", int(bin1, 2), "Second Number Dec", int(bin2, 2))    # converts it to dec to make it easy to understand
+        print ("Binary Answer:", addsol, "Decimal Answer:", addsolDec)                   # finale result booth in dec and and in bin
+        print()
+        Mutiplaction()
+    if choose == 3:
+        Mutiplaction()
+    def Divider():      # diffrent of the bunch
+        print("Binary Diveder")
+        print()
+        bin1 = str(input("Please enter first Binary Number: "))
+        bin2 = str(input("Please enter second Binary Number: "))
+        bin1Child = int(bin1, 2)                        # The RailRoads ========== cho cho
+        bin2Child = int(bin2, 2)                        # this are simply converts bins back and forth
+        addsol = bin1Child/bin2Child                    # so that they can have math done to them
+        addsol2 = int(addsol)                           # as python does not like straight up diving bins
+        addsol2 = bin(addsol2)                          # finale switch to binary
+        print() # blank space
+        print("First Number Dec: ", int(bin1, 2), "Second Number Dec", int(bin2, 2))    # converts it to dec to make it easy to understand
+        print ("Binary Answer:", addsol2, "Decimal Answer:", addsol)                   # finale result booth in dec and and in bin
+        print()
+        Divider()
+    if choose == 4:
+        Divider()
+    if choose >= 5:
+        chooser()
+
+Calc()

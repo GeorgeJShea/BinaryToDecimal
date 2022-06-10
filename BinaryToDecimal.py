@@ -14,7 +14,16 @@ def ConvertionFrac():
     global bin1
     global bin2
 
-    if len(binFrac1) > 0:  # not neccery just lets me hide information
+    if len(binFrac1) > 0:
+        result = 0
+        scrum = [.5, .25, .125, .0625, .03125, .015625, .0078125, .00398625]
+        header = 0
+        while( header < len(binFrac1)):
+            if binFrac1[header] == '1':
+                result = result + scrum[header]
+                print(" Current Result: " , result,    "   " , header, "    ", scrum[header])
+            header += 1
+        '''
         power1 = 0
         if len(binFrac1) > 0:
             if "1" in binFrac1[0]:
@@ -47,42 +56,25 @@ def ConvertionFrac():
         if len(binFrac1) > 7:
             if "1" in binFrac1[7]:
                 power8 = .00390625
-    ResultPower = power1 + power2 + power3 + power4 + power5 + power6 + power7 + power8
 
-    if len(binFrac2) > 0:  # not neccery just lets me hide information
-        power1b = 0
-        if len(binFrac2) > 0:
-            if "1" in binFrac2[0]:
-                power1b = .5
-        power2b = 0
-        if len(binFrac2) > 1:
-            if "1" in binFrac2[1]:
-                power2b = .25
-        power3b = 0
-        if len(binFrac2) > 2:
-            if "1" in binFrac2[2]:
-                power3b = .125
-        power4b = 0
-        if len(binFrac2) > 3:
-            if "1" in binFrac2[3]:
-                power4b = .0625
-        power5b = 0
-        if len(binFrac2) > 4:
-            if "1" in binFrac2[4]:
-                power5b = .03125
-        power6b = 0
-        if len(binFrac2) > 5:
-            if "1" in binFrac2[5]:
-                power6b = .015625
-        power7b = 0
-        if len(binFrac2) > 6:
-            if "1" in binFrac2[6]:
-                power7b = .0078125
-        power8b = 0
-        if len(binFrac2) > 7:
-            if "1" in binFrac2[7]:
-                power8b = .00390625
-    ResultPowerb = power1b + power2b + power3b + power4b + power5b + power6b + power7b + power8b
+    ResultPower = power1 + power2 + power3 + power4 + power5 + power6 + power7 + power8
+    '''
+
+    print()
+    ResultPower = result
+
+    if len(binFrac2) > 0:
+        result = 0
+        scrum = [.5, .25, .125, .0625, .03125, .015625, .0078125, .00398625]
+        header = 0
+        while (header < len(binFrac2)):
+            if binFrac2[header] == '1':
+                result = result + scrum[header]
+                print(" Current Result: " , result,    "   " , header, "    ", scrum[header])
+            header += 1
+    ResultPowerb = result
+
+    # ResultPowerb = power1b + power2b + power3b + power4b + power5b + power6b + power7b + power8b
 # this convert it back
 def ConvertionBin():
     global overflow
@@ -142,7 +134,7 @@ def Calc():
     print("2 Subtraction")
     print("3 multiplaction")
     print("4 division")
-    choose = int(input("Enter Dir Number"))
+    choose = int(input("Enter Dir Number "))
     def Addition():     # also a converter
         global binFrac1
         global binFrac2

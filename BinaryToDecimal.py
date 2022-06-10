@@ -14,6 +14,7 @@ def ConvertionFrac():
     global bin1
     global bin2
 
+
     if len(binFrac1) > 0:
         result = 0
         scrum = [.5, .25, .125, .0625, .03125, .015625, .0078125, .00398625]
@@ -148,6 +149,12 @@ def Calc():
                 a = 1   # so it just donst run calc
         bin2 = str(input("Please enter second Binary Number: "))
         # --------------------------------------------------------#
+
+        if not "." in bin1:
+            bin1 = bin1 + '.0'
+
+        if not "." in bin2:
+            bin2 = bin2 + '.0'
         bin1, binFrac1 = bin1.split(".", 1)
         bin2, binFrac2 = bin2.split(".", 1)
         power1 = 0
@@ -191,6 +198,13 @@ def Calc():
                 a = 1   # so it just donst run calc
         bin2 = str(input("Please enter second Binary Number: "))
         #---#
+        
+        
+        if not "." in bin1:
+            bin1 = bin1 + '.0'
+
+        if not "." in bin2:
+            bin2 = bin2 + '.0'
         bin1, binFrac1 = bin1.split(".", 1)
         bin2, binFrac2 = bin2.split(".", 1)
 
@@ -241,7 +255,13 @@ def Calc():
             else:
                 a = 1   # so it just donst run calc
         bin2 = str(input("Please enter second Binary Number: "))
+        
+        if not "." in bin1:
+            bin1 = bin1 + '.0'
 
+        if not "." in bin2:
+            bin2 = bin2 + '.0'
+            
         bin1, binFrac1 = bin1.split(".", 1)
         bin2, binFrac2 = bin2.split(".", 1)
         ConvertionFrac()
@@ -282,6 +302,13 @@ def Calc():
             else:
                 a = 1   # so it just donst run calc
         bin2 = str(input("Please enter second Binary Number: "))
+
+        if not "." in bin1:
+            bin1 = bin1 + '.0'
+
+        if not "." in bin2:
+            bin2 = bin2 + '.0'
+
         bin1, binFrac1 = bin1.split(".", 1)
         bin2, binFrac2 = bin2.split(".", 1)
 
